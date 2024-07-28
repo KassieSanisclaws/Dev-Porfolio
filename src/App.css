@@ -29,8 +29,10 @@
   .grid-sections {
     grid-template-areas: 
       "heroSection heroSection"
-      "aboutMe mySkills"
-      "projects contactMe";
+      "aboutMe aboutMe"
+      "mySkills mySkills"
+      "projects projects"
+      "contactMe contactMe";
     grid-template-columns: 1fr 1fr;
   }
 };

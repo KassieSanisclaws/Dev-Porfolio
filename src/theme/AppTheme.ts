@@ -4,12 +4,26 @@ const AppTheme = createTheme({
     palette: {
         mode: "light", //Default theme mode
         primary: {
-            main: "#000000", 
+            main: "#8BDF69", // Green
+            light: "#37F78D", // Light Green
+            dark: "#046307" // Emerald Green
         },
         secondary: {
-            main: "#FFFFFF",
-            light: "#FFFFFF",
-            dark: "#000000",
+            main: "#3CB371",
+            light: "#F0FFF0",
+            dark: "#DAF7A6",
+        },
+        info: {
+            main: "#00FFFF",
+        },
+        success: {
+            main: "#FF2456",
+        },
+        warning: {
+            main: "#191970",
+        },
+        error: {
+            main: "#DF698B",
         },
         background: {
             default: "#FFFFFF",
@@ -24,15 +38,6 @@ const AppTheme = createTheme({
             },
         },
     },
-    // "&.MuiButton-containedSecondary": {
-    //     backgroundColor: "#FFFFFF",
-    //     color: "white", //Text color
-    //     "&:hover": {
-    //         backgroundColor: "#FFFFFF",
-    //         color: "black", //Text color
-    //  },
-    // },
-
 });
 
 export default AppTheme;
