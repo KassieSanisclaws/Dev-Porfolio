@@ -21,11 +21,6 @@ const PageTabs = () => {
                             Skills
                         </Typography>
                     </Button>
-                    <Button sx={tabStyles} href="#education">
-                        <Typography variant="h6">
-                            Education
-                        </Typography>
-                    </Button>
                     <Button sx={tabStyles} href="#uxdesigns">
                         <Typography variant="h6">
                             Designs
@@ -34,11 +29,6 @@ const PageTabs = () => {
                     <Button sx={tabStyles} href="#projects-section">
                         <Typography variant="h6">
                             Projects
-                        </Typography>
-                    </Button>
-                    <Button sx={tabStyles} href="#remarks-section">
-                        <Typography variant="h6">
-                            Remarks
                         </Typography>
                     </Button>
                     <Button sx={tabStyles} href="#contact-me-section">

@@ -1,5 +1,5 @@
 import { Grid, Typography, Box, useMediaQuery } from "@mui/material";
-import HamburgerMenu from './HamburgerMenu';
+import HamburgerMenu from './hamburgerMenu/HamburgerMenu';
 import PageTabs from './PageTabs';
 
 const Header = () => {
@@ -7,8 +7,8 @@ const Header = () => {
     return (
         <Box sx={{ width: "100%" }}>
             <Grid container>
-                <Grid item xs={10} md={10} lg={7.5}  sx={{ 
-                      border: "3px solid red",
+                <Grid item xs={10} md={10} lg={7.5}  sx={{
+                      background: 'linear-gradient(rgba(20, 206, 51, 0.712), rgba(255, 255, 255, 0.466))',
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "flex-end",

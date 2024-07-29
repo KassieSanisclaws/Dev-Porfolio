@@ -1,4 +1,3 @@
-import React from 'react';
 import { Grid, Typography, Box, Button, TextField } from "@mui/material";
 import AppTheme from '../theme/AppTheme';
 import EmailIcon from '@mui/icons-material/Email';
@@ -15,13 +14,13 @@ const ContactMe = () => {
     return (
         <Box sx={{
             padding: 2,
-            borderTop: "2px solid gray",
             background: `linear-gradient(20deg, white 60%, ${theme.primary.main} 50%)`,
-            // minHeight: '100vh'
         }}>
             <Typography variant="h3" 
                         align="center" 
-                        sx={{ paddingBottom: 4,
+                        sx={{ 
+                              mb: 4,
+                              padding: 2,
                               textTransform: 'uppercase',
                               textDecoration: 'underline'
                          }}>
@@ -31,7 +30,7 @@ const ContactMe = () => {
             <Grid container spacing={2} justifyContent="center">
                 {/* Contact Info Section */}
                 <Grid item xs={12} md={4} sx={{
-                    backgroundColor: theme.primary.main,
+                    background: 'linear-gradient(rgba(20, 206, 51, 0.712), rgba(255, 255, 255, 0.466))',
                     padding: 3,
                     boxShadow: `0 20px 20px ${theme.primary.dark}`,
                     display: 'flex',
@@ -68,16 +67,16 @@ const ContactMe = () => {
                     {/* Social Media Icons */}
                     <Box component="ul" sx={{ display: 'flex', justifyContent: 'center', marginTop: 3, padding: 0, listStyle: 'none' }}>
                         <Box component="li" sx={{ marginRight: 2 }}>
-                            <a href="#"><TwitterIcon sx={{ fontSize: 40, color: 'white', opacity: 0.5, '&:hover': { opacity: 1 } }} /></a>
+                            <a href="#"><TwitterIcon sx={{ fontSize: 40, color: theme.primary.dark, opacity: 0.5, '&:hover': { opacity: 1 } }} /></a>
                         </Box>
                         <Box component="li" sx={{ marginRight: 2 }}>
-                            <a href="#"><GitHubIcon sx={{ fontSize: 40, color: 'white', opacity: 0.5, '&:hover': { opacity: 1 } }} /></a>
+                            <a href="#"><GitHubIcon sx={{ fontSize: 40, color: theme.primary.dark, opacity: 0.5, '&:hover': { opacity: 1 } }} /></a>
                         </Box>
                         <Box component="li" sx={{ marginRight: 2 }}>
-                            <a href="#"><InstagramIcon sx={{ fontSize: 40, color: 'white', opacity: 0.5, '&:hover': { opacity: 1 } }} /></a>
+                            <a href="#"><InstagramIcon sx={{ fontSize: 40, color: theme.primary.dark, opacity: 0.5, '&:hover': { opacity: 1 } }} /></a>
                         </Box>
                         <Box component="li">
-                            <a href="#"><LinkedInIcon sx={{ fontSize: 40, color: 'white', opacity: 0.5, '&:hover': { opacity: 1 } }} /></a>
+                            <a href="#"><LinkedInIcon sx={{ fontSize: 40, color: theme.primary.dark, opacity: 0.5, '&:hover': { opacity: 1 } }} /></a>
                         </Box>
                     </Box>
                 </Grid>
@@ -121,7 +120,7 @@ const ContactMe = () => {
                                 variant="contained" 
                                 sx={{
                                   width: '13vw',
-                                  backgroundColor: theme.primary.main, '&:hover': { backgroundColor: theme.primary.light }, 
+                                  background: 'linear-gradient(rgba(20, 206, 51, 0.712), rgba(255, 255, 255, 0.466))', '&:hover': { backgroundColor: theme.secondary.light }, 
                                   alignSelf: 'flex-start' 
                                   }}>
                            <Typography variant="button">Send Message</Typography>

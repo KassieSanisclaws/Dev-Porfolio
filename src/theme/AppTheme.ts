@@ -10,7 +10,7 @@ const AppTheme = createTheme({
         },
         secondary: {
             main: "#3CB371",
-            light: "#F0FFF0",
+            light: "#14CE33B6",
             dark: "#DAF7A6",
         },
         info: {
