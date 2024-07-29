@@ -7,7 +7,6 @@
 #root {
   height: 100%;
   width: 100%;
-  background-color: brown;
 }
 
 .grid-sections {
@@ -50,4 +49,9 @@
 .projects { grid-area: projects; }
 .contactMe { grid-area: contactMe; }
 
+.appGlass {
+  background: linear-gradient(135deg, rgba(20, 206, 51, 0.712), rgba(255, 255, 255, 0.466));
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
 

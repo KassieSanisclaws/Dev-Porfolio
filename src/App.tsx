@@ -49,7 +49,7 @@ function App() {
     </Box>
   <Footer />
   </>
-   )
+ )
 };
 
 export default App
