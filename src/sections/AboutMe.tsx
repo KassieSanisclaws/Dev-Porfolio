@@ -30,14 +30,16 @@ const AboutMe = () => {
                 border: '3px solid #ccc',
                 overflow: 'hidden',
             }}>
-              <Grid item sx={{ border: '3px solid black' }}
+              <Grid item
                     xs={12}
-                    md={7.5}>
+                    md={8.3}>
                    <EducationHistory />
                </Grid>
-               <Grid item sx={{ border: '3px solid blue' }}
+               <Grid item sx={{ border: '3px solid blue',
+                 backgroundColor: "white",
+                }}
                      xs={12}
-                     md={4.5}>
+                     md={3.7}>
                      <TimeLine />
              </Grid>
              <Grid item sx={{ border: '3px solid red' }}

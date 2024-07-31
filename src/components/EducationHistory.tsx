@@ -1,16 +1,23 @@
 import { Grid, Typography, Box } from "@mui/material";
-
+import AccordionTemplate from "./accordion/AccordionTemplate";
 
 const EducationHistory = () => {
-
     return (
         <Box>
             <Grid container>
-                <Grid item xs={12}>
-                    <Typography variant='h3'>Education History</Typography>    
+                <Grid item xs={12}
+                  sx={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    mt: 1,
+                    mb: 1,
+                  }}
+                 >
+                    <Typography variant='h3'>Education History:</Typography>    
                 </Grid>
                 <Grid item xs={12}>
-                    <Typography variant='h4'>Content Here Below:</Typography>    
+                    <AccordionTemplate />
                 </Grid>
             </Grid>
         </Box>

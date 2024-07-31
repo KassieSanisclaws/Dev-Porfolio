@@ -1,4 +1,6 @@
 import { createTheme } from "@mui/material/styles";
+import type {} from "@mui/lab/themeAugmentation";
+
 
 const AppTheme = createTheme({
     palette: {
@@ -29,6 +31,9 @@ const AppTheme = createTheme({
             default: "#FFFFFF",
         },
     },
+    typography: {
+        fontFamily: "Roboto, sans-serif",
+    },
     components: {
         MuiButton: {
             styleOverrides: {
@@ -37,6 +42,13 @@ const AppTheme = createTheme({
                 },
             },
         },
+       MuiTimeline: {
+           styleOverrides: {
+             root: {
+                backgroundColor: "#8BDF69",
+             }
+           }
+       }
     },
 });
 
