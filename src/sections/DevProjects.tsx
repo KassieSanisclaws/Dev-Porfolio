@@ -27,6 +27,7 @@ const DevProjects = () => {
                             align="center"
                             sx={{ textTransform: 'uppercase',
                                  textDecoration: 'underline',
+                                 color: "white"
                             }}
                             >
                             Projects:

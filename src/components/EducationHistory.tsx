@@ -14,7 +14,10 @@ const EducationHistory = () => {
                     mb: 1,
                   }}
                  >
-                    <Typography variant='h3'>Education History:</Typography>    
+                    <Typography variant='h3' sx={{
+                           color: "white",
+                        }}>
+                        Education History:</Typography>    
                 </Grid>
                 <Grid item xs={12}>
                     <AccordionTemplate />

@@ -21,6 +21,7 @@ const AboutMe = () => {
                     sx={{
                         textTransform: 'uppercase',
                         textDecoration: 'underline',
+                        color: "white"
                     }}>
                     About Me:
                 </Typography>
@@ -35,9 +36,7 @@ const AboutMe = () => {
                     md={8.3}>
                    <EducationHistory />
                </Grid>
-               <Grid item sx={{ border: '3px solid blue',
-                 backgroundColor: "white",
-                }}
+               <Grid item sx={{ backgroundColor: "white", }}
                      xs={12}
                      md={3.7}>
                      <TimeLine />

@@ -7,32 +7,32 @@ const PageTabs = () => {
                 <Box sx={{ height: '100%', width: "100%", display: 'flex', justifyContent: 'space-between' }}>
                     {/** Tabs List **/}
                     <Button sx={tabStyles} href="#heroSection">
-                        <Typography variant="h6">
+                        <Typography variant="h6" sx={{ color: "white", textTransform: "uppercase", fontWeight: "bold"}}>
                             Hero
                         </Typography>
                     </Button>
                     <Button sx={tabStyles} href="#aboutMe">
-                        <Typography variant="h6">
+                        <Typography variant="h6" sx={{ color: "white", textTransform: "uppercase", fontWeight: "bold" }}>
                             About
                         </Typography>
                     </Button>
                     <Button sx={tabStyles} href="#skills">
-                        <Typography variant="h6">
+                        <Typography variant="h6" sx={{ color: "white", textTransform: "uppercase", fontWeight: "bold" }}>
                             Skills
                         </Typography>
                     </Button>
                     <Button sx={tabStyles} href="#uxdesigns">
-                        <Typography variant="h6">
+                        <Typography variant="h6" sx={{ color: "white", textTransform: "uppercase", fontWeight: "bold" }}>
                             Designs
                         </Typography>
                     </Button>
                     <Button sx={tabStyles} href="#projects-section">
-                        <Typography variant="h6">
+                        <Typography variant="h6" sx={{ color: "white", textTransform: "uppercase", fontWeight: "bold" }}>
                             Projects
                         </Typography>
                     </Button>
                     <Button sx={tabStyles} href="#contact-me-section">
-                        <Typography variant="h6">
+                        <Typography variant="h6" sx={{ color: "white", textTransform: "uppercase", fontWeight: "bold" }}>
                             Contact
                         </Typography>
                     </Button>
