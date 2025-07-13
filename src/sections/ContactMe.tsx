@@ -14,7 +14,7 @@ const ContactMe = () => {
     return (
         <Box sx={{
             padding: 2,
-            background: `linear-gradient(20deg, white 60%, ${theme.primary.main} 50%)`,
+            background: `linear-gradient(10deg, white 60%, ${theme.primary.main} 90%)`,
         }}>
             <Typography variant="h3" 
                         align="center" 
@@ -22,7 +22,9 @@ const ContactMe = () => {
                               mb: 4,
                               padding: 2,
                               textTransform: 'uppercase',
-                              textDecoration: 'underline'
+                              textDecoration: 'underline',
+                              color: "white",
+                              textShadow: `2px 2px 4px ${theme.primary.dark}`,
                          }}>
                    Contact:
             </Typography>
@@ -42,25 +44,51 @@ const ContactMe = () => {
                         fontWeight: 'bold',
                         textTransform: 'uppercase',
                         textDecoration: 'underline',
-                        marginBottom: 2
+                        marginBottom: 2,
+                        marginTop: 2,
+                        color: "white",
+                        fontSize: '2.5rem',
+                        textShadow: `2px 2px 4px ${theme.primary.dark}`,
                     }}>
                         Contact Me:
                     </Typography>
                     <Box component="ul" sx={{ listStyle: 'none', padding: 0, margin: 0 }}>
                         <Box component="li" sx={{ display: 'flex', alignItems: 'center', marginBottom: 2 }}>
-                            <LocationOnIcon sx={{ marginRight: 1 }} />
-                            <Typography>
+                            <LocationOnIcon sx={{ marginRight: 1, color: "white", filter: `drop-shadow(2px 2px 4px ${theme.primary.dark})` }} />
+                            <Typography
+                                sx={{ 
+                                    textTransform: 'uppercase',
+                                    color: "white",
+                                    fontWeight: 'bold',
+                                    textShadow: `2px 2px 4px ${theme.primary.dark}`,
+                                }}>
                                 Canada<br />
                                 Brampton, Ontario
                             </Typography>
                         </Box>
-                        <Box component="li" sx={{ display: 'flex', alignItems: 'center', marginBottom: 2 }}>
-                            <EmailIcon sx={{ marginRight: 1 }} />
-                            <Typography>Kassie.Sanisclaws35@gmail.com</Typography>
+                        <Box component="li" sx={{ display: 'flex', alignItems: 'center', marginBottom: 2, marginTop: 3 }}>
+                            <EmailIcon sx={{ marginRight: 1, color: "white", filter: `drop-shadow(2px 2px 4px ${theme.primary.dark})` }} />
+                            <Typography
+                               sx={{ 
+                                    textTransform: 'uppercase',
+                                    color: 'white',
+                                    fontWeight: 'bold',
+                                    textShadow: `2px 2px 4px ${theme.primary.dark}`,
+                                }}>
+                                    Kassie.Sanisclaws35@gmail.com
+                            </Typography>
                         </Box>
-                        <Box component="li" sx={{ display: 'flex', alignItems: 'center' }}>
-                            <PhoneIcon sx={{ marginRight: 1 }} />
-                            <Typography>+1-647-61X-XXXX</Typography>
+                        <Box component="li" sx={{ display: 'flex', alignItems: 'center', marginTop: 3 }}>
+                            <PhoneIcon sx={{ marginRight: 1, color: "white", filter: `drop-shadow(2px 2px 4px ${theme.primary.dark})` }} />
+                            <Typography
+                                sx={{ 
+                                    textTransform: 'uppercase',
+                                    color: "white",
+                                    fontWeight: 'bold',
+                                    textShadow: `2px 2px 4px ${theme.primary.dark}`,
+                                }}>
+                                    +1-647-61X-XXXX
+                            </Typography>
                         </Box>
                     </Box>
 
@@ -91,7 +119,11 @@ const ContactMe = () => {
                         fontWeight: 'bold',
                         textTransform: 'uppercase',
                         textDecoration: 'underline',
-                        marginBottom: 3
+                        marginBottom: 3,
+                        marginTop: 2,
+                        color: "white",
+                        fontSize: '2.5rem',
+                        textShadow: `2px 2px 4px ${theme.primary.dark}`,
                     }}>
                         Send Me A Message:
                     </Typography>
@@ -120,10 +152,10 @@ const ContactMe = () => {
                                 variant="contained" 
                                 sx={{
                                   width: '13vw',
-                                  background: 'linear-gradient(rgba(20, 206, 51, 0.712), rgba(255, 255, 255, 0.466))', '&:hover': { backgroundColor: theme.secondary.light }, 
+                                  background: 'linear-gradient(rgba(20, 206, 51, 0.712), rgba(255, 255, 255, 0.466))', '&:hover': { backgroundColor: theme.primary.light }, 
                                   alignSelf: 'flex-start' 
                                   }}>
-                           <Typography variant="button">Send Message</Typography>
+                           <Typography variant="button" sx={{ color: "white", filter: `drop-shadow(2px 2px 4px ${theme.primary.dark})` }}>Send Message</Typography>
                         </Button>
                         </Box>
                     </Box>

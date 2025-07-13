@@ -16,7 +16,7 @@ const DevProjects = () => {
     return (
         <Box sx={{ 
             padding: 2, 
-            background: `linear-gradient(20deg, white 69%, ${theme.primary.main} 50%)`,
+            background: `linear-gradient(13deg, white 65%, ${theme.primary.main} 90%)`,
             }}
             >
             <Box sx={{ mb: 4, 
@@ -27,7 +27,8 @@ const DevProjects = () => {
                             align="center"
                             sx={{ textTransform: 'uppercase',
                                  textDecoration: 'underline',
-                                 color: "white"
+                                 color: "white",
+                                 textShadow: `2px 2px 4px ${theme.primary.dark}`
                             }}
                             >
                             Projects:

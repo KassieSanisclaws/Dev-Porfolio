@@ -16,7 +16,9 @@
     "aboutMe"
     "mySkills"
     "projects"
-    "contactMe";
+    "wireframe"
+    "contactMe"
+    "footer";
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   gap: 2rem;
@@ -31,7 +33,9 @@
       "aboutMe aboutMe"
       "mySkills mySkills"
       "projects projects"
-      "contactMe contactMe";
+      "wireframe wireframe"
+      "contactMe contactMe"
+      "footer footer";
     grid-template-columns: 1fr 1fr;
   }
 };
@@ -47,7 +51,9 @@
 .aboutMe { grid-area: aboutMe; }
 .mySkills { grid-area: mySkills; }
 .projects { grid-area: projects; }
+.wireframe { grid-area: wireframe; }
 .contactMe { grid-area: contactMe; }
+.footer { grid-area: footer; }
 
 .appGlass {
   background: linear-gradient(135deg, rgba(20, 206, 51, 0.712), rgba(255, 255, 255, 0.466));

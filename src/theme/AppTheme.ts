@@ -8,12 +8,12 @@ const AppTheme = createTheme({
         primary: {
             main: "#8BDF69", // Green
             light: "#37F78D", // Light Green
-            dark: "#046307" // Emerald Green
+            dark: "#046307", // Emerald Green
         },
         secondary: {
-            main: "#3CB371",
-            light: "#14CE33B6",
-            dark: "#DAF7A6",
+            main: "#3CB371", // Sea Green
+            light: "#14CE33B6", // Light Sea Green
+            dark: "#DAF7A6", // Dark Sea Green
         },
         info: {
             main: "#00FFFF",

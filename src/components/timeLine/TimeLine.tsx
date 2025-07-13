@@ -1,14 +1,22 @@
 import { Grid, Box, Typography } from "@mui/material";
-import { Timeline, TimelineItem, TimelineSeparator, TimelineConnector, TimelineContent, TimelineOppositeContent,
-         TimelineDot } from "@mui/lab";
+import { Timeline, TimelineItem, TimelineSeparator, TimelineConnector, TimelineContent, TimelineOppositeContent, TimelineDot } from "@mui/lab";
 import { WorkOutlineOutlined, School, DeveloperBoardRounded } from "@mui/icons-material";
 import AppTheme from "../../theme/AppTheme";
 
 const TimeLine = () => {
   const theme = AppTheme.palette;
     return (
-        <Box sx={{ border: `3px solid ${theme.primary.main}`, margin: "5px", borderRadius: "5px" }}>
-            <Grid container>
+        <Box sx={{ 
+                border: `3px solid ${theme.primary.main}`, 
+                margin: "5px", 
+                borderRadius: "5px", 
+                height: "100%", 
+                maxHeight: "91%", 
+                overflow: "hidden", 
+                overflowY: "auto", 
+                scrollbarColor: 'green #e0e0e0', 
+                }}> 
+            <Grid container sx={{ }}>
                 <Grid item xs={12} sx={{
                     display: "flex",
                     justifyContent: "center",
@@ -18,16 +26,16 @@ const TimeLine = () => {
                     padding: "5px",
                     borderRadius: "55px",
                     fontFamily: AppTheme.typography.fontFamily
-                }}>
-                    <Typography variant='h3'>TimeLine</Typography>
+                    }}>
+                    <Typography variant='h3' sx={{ textShadow: `2px 2px 4px ${AppTheme.palette.primary.dark}` }}>TimeLine</Typography>
                 </Grid>
-                <Grid item xs={12}>
-
+                <Grid item xs={12} sx={{ height: "100%", }}>
                     <Timeline position="alternate" 
                            sx={{
-                            backgroundColor: "white"
-                           }}>
-                            
+                            backgroundColor: "white",
+                            overflow: "hidden",
+                            overflowY: "auto",
+                           }}> 
                         <TimelineItem>
                             <TimelineOppositeContent
                                 sx={{ m: 'auto 0',
@@ -117,7 +125,7 @@ const TimeLine = () => {
                                     color: theme.primary.dark,
                                     fontWeight: 'bold'
                                 }}>
-                                    2024-Current: Video Game Design & Development
+                                    2023-Current: Video Game Design & Development
                                 </Typography>
                             </TimelineContent>
                         </TimelineItem>
@@ -213,9 +221,7 @@ const TimeLine = () => {
                                 </Typography>
                             </TimelineContent>
                         </TimelineItem>
-
                     </Timeline>
-
                 </Grid>
             </Grid>
         </Box>

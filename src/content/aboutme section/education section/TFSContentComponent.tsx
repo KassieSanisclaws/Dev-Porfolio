@@ -45,12 +45,13 @@ const TFSContentComponent = () => {
     
     return (
         <Box>
-            <Grid container>
+            <Grid container>    
                 <Typography variant='h4'
-                   sx={{ margin: "0 0 0 53px",
+                   sx={{ margin: "0 0 0 10.5%",
                          color: theme.primary.dark,
                          fontStyle: AppTheme.typography.fontFamily,
                          textDecoration: 'underline',
+                         textShadow: `2px 2px 4px ${theme.primary.dark}`,
                     }}>
                     Courses
                 </Typography>
@@ -66,7 +67,7 @@ const TFSContentComponent = () => {
                         value={value}
                         onChange={handleChange}
                         aria-label="Vertical tabs example"
-                        sx={{ borderRight: 1, borderColor: 'divider', }}
+                        sx={{ borderRight: 1, borderColor: 'divider', width: "100%" }}
                        >
                         <Tab label={<Typography 
                                       variant="body1"
@@ -147,25 +148,77 @@ const TFSContentComponent = () => {
                             />
                      </Tabs>
                      <TabPanel value={value} index={0}>
-                            Item One
+                          <Typography variant="h6">  
+                               3D Modeling with 3ds Max
+                          </Typography>
+                          <Typography variant="body1">     
+                               Beginner-level experience using Autodesk 3ds Max to create basic 3D shapes and objects for game development.
+                               Familiar with modeling tools, object manipulation, and exporting assets for use in game engines like Unity or Unreal Engine. 
+                               Focused on building foundational skills in creating clean, game-ready models.
+                           </Typography>
                      </TabPanel>
                      <TabPanel value={value} index={1}>
-                            Item Two
+                           <Typography variant="h6">  
+                               Unity Game Development
+                          </Typography>
+                          <Typography variant="body1">     
+                               Intermediate experience developing 2D and 3D games using Unity for desktop and Android platforms. Created various game types including infinite runners, 
+                               level-based games, and mobile-friendly experiences. Skilled in C# scripting, physics, animation, UI systems, and game logic implementation. 
+                               Familiar with optimizing performance for mobile, integrating game assets, and building and deploying APKs for Android devices.
+                               Comfortable working with Unity’s input system, prefab workflows, and scene management.
+                           </Typography>
                      </TabPanel>
                      <TabPanel value={value} index={2}>
-                            Item Three
+                            <Typography variant="h6">  
+                               Unreal Engine Development
+                          </Typography>
+                          <Typography variant="body1">     
+                               Beginner-level experience using Unreal Engine to create basic gameplay systems and interactive environments. 
+                               Familiar with the Blueprint Visual Scripting system, level design tools, and importing assets for use in 3D scenes. 
+                               Gaining experience in character control, animations, and simple game mechanics. 
+                               Actively learning to build playable prototypes and exploring integration with game-ready models and logic.
+                           </Typography>
                      </TabPanel>
                      <TabPanel value={value} index={3}>
-                            Item Four
+                        <Typography variant="h6">
+                            Adobe Photoshop
+                        </Typography>
+                        <Typography variant="body1">
+                            Hands-on experience using Adobe Photoshop for creating and editing digital assets, including textures, UI elements, and promotional materials. 
+                            Familiar with essential tools such as layers, masks, blending modes, and exporting optimized images for game development. 
+                            Used Photoshop to support 2D game design, UI layout, and basic asset creation for both web and mobile platforms.
+                        </Typography>
                      </TabPanel>
                      <TabPanel value={value} index={4}>
-                            Item Five
+                        <Typography variant="h6">
+                            Adobe Illustrator
+                        </Typography>
+                        <Typography variant="body1">
+                            Beginner-level experience using Adobe Illustrator to design vector-based graphics, including custom logos and branding elements. 
+                            Familiar with tools such as the pen tool, shapes, typography, and color palettes to create clean, scalable designs suitable for both digital and print use.
+                        </Typography>
                      </TabPanel>
                      <TabPanel value={value} index={5}>
-                            Item Six
+                        <Typography variant="h6">
+                           Game Design Principles
+                        </Typography>
+                        <Typography variant="body1">
+                            Understanding of core game design principles including player feedback loops, progression systems, difficulty balancing, and engaging mechanics. 
+                            Experienced in designing both 2D and 3D gameplay systems with a focus on user experience, level flow, and replayability. 
+                            Applied these principles in developing infinite runners, level-based games, and mobile-friendly experiences using Unity and Unreal Engine.
+                        </Typography>
                      </TabPanel>
                      <TabPanel value={value} index={6}>
-                            Item Seven
+                        <Typography variant="h6">
+                            Game Development
+                        </Typography>
+                        <Typography variant="body1">
+                            Hands-on experience designing and developing 2D and 3D games for desktop and mobile platforms. 
+                            Proficient in using Unity (intermediate) and Unreal Engine (beginner) to build gameplay systems, levels, and interactive features. 
+                            Skilled in C# scripting, animation, UI, asset integration, and mobile deployment. 
+                            Familiar with core game development workflows, including prototyping, debugging, performance optimization, and exporting for Android devices. 
+                            Applied game development knowledge to create infinite runners, level-based games, and polished prototypes.
+                        </Typography>
                      </TabPanel>
                    </Box>
                 </Grid>

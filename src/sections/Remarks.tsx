@@ -1,5 +1,5 @@
-import React from 'react';
-import { Grid, Typography, Box } from "@mui/material";
+// File: Dev-Portfolio/src/sections/Remarks.tsx
+import { Grid, Typography } from "@mui/material";
 
 
 const Remarks = () => {

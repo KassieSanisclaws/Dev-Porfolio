@@ -8,6 +8,7 @@ import TFSContentComponent from "../../content/aboutme section/education section
 import CBCContentComponent from "../../content/aboutme section/education section/CBCContentComponent";
 import TriosContentComponent from "../../content/aboutme section/education section/TriosContentComponent";
 import CLSSContentComponent from "../../content/aboutme section/education section/CLSSContentComponent";
+import SheridanCollegeContentComponent from "../../content/aboutme section/education section/SheridanCollegeContentComponent";
 
 // Accordion data
 const accordionData = [
@@ -15,23 +16,45 @@ const accordionData = [
         title: <Typography variant='h4'
                 sx={{
                     color: AppTheme.palette.primary.dark,
-                    fontWeight: 'bold',
                     fontStyle: AppTheme.typography.fontFamily,
+                    textShadow: `2px 2px 4px ${AppTheme.palette.primary.dark}`
                 }}
                 >
                   Toronto Film School
               </Typography>,
+        subtitle: <Typography variant='subtitle1'
+                sx={{
+                    color: AppTheme.palette.primary.main,
+                    fontStyle: AppTheme.typography.fontFamily,
+                    textShadow: `1px 1px 2px ${AppTheme.palette.primary.main}`,
+                    margin: "0 0 0 20px",
+                    fontSize: '1.5rem'
+                }}
+                >
+                  Game Design & Development
+              </Typography>,    
         content: <TFSContentComponent />,
     },
     {
         title: <Typography variant='h4'
                 sx={{
                     color: AppTheme.palette.primary.dark,
-                    fontWeight: 'bold',
                     fontStyle: AppTheme.typography.fontFamily,
+                    textShadow: `2px 2px 4px ${AppTheme.palette.primary.dark}`
                 }}
                 >
                   Canadian Business College
+              </Typography>,
+              subtitle: <Typography variant='subtitle1'
+                sx={{
+                    color: AppTheme.palette.primary.main,
+                    fontStyle: AppTheme.typography.fontFamily,
+                    textShadow: `1px 1px 2px ${AppTheme.palette.primary.main}`,
+                    margin: "0 0 0 20px",
+                    fontSize: '1.5rem'
+                }}
+                >
+                    Software Engineering & Web Development
               </Typography>,
         content: <CBCContentComponent />
     },
@@ -39,11 +62,22 @@ const accordionData = [
         title: <Typography variant='h4'
                 sx={{
                     color: AppTheme.palette.primary.dark,
-                    fontWeight: 'bold',
                     fontStyle: AppTheme.typography.fontFamily,
+                    textShadow: `2px 2px 4px ${AppTheme.palette.primary.dark}`
                 }}
                 >
                   Trios College
+              </Typography>,
+              subtitle: <Typography variant='subtitle1'
+                sx={{
+                    color: AppTheme.palette.primary.main,
+                    fontStyle: AppTheme.typography.fontFamily,
+                    textShadow: `1px 1px 2px ${AppTheme.palette.primary.main}`,
+                    margin: "0 0 0 20px",
+                    fontSize: '1.5rem'
+                }}
+                >
+                  Enterprise Web & Mobile Applications Development + (Internship)
               </Typography>,
         content: <TriosContentComponent />
     },
@@ -51,23 +85,45 @@ const accordionData = [
         title: <Typography variant='h4'
                 sx={{
                     color: AppTheme.palette.primary.dark,
-                    fontWeight: 'bold',
                     fontStyle: AppTheme.typography.fontFamily,
+                    textShadow: `2px 2px 4px ${AppTheme.palette.primary.dark}`
                 }}
                 >
                   Sheridan College
               </Typography>,
-        content: "Sheridan College Institute of Technology and Advanced Learning is a leading institution for arts, business, and technology programs.",
+              subtitle: <Typography variant='subtitle1'
+                sx={{
+                    color: AppTheme.palette.primary.main,
+                    fontStyle: AppTheme.typography.fontFamily,
+                    textShadow: `1px 1px 2px ${AppTheme.palette.primary.main}`,
+                    margin: "0 0 0 20px",
+                    fontSize: '1.5rem'
+                }}
+                >
+                  Police Foundations & Community Safety
+              </Typography>,
+        content: <SheridanCollegeContentComponent />
     },
     {
         title: <Typography variant='h4'
                 sx={{
                     color: AppTheme.palette.primary.dark,
-                    fontWeight: 'bold',
                     fontStyle: AppTheme.typography.fontFamily,
+                    textShadow: `2px 2px 4px ${AppTheme.palette.primary.dark}`
                 }}
                 >
                   Cardinal Leger Secondary School
+              </Typography>,
+              subtitle: <Typography variant='subtitle1'
+                sx={{
+                    color: AppTheme.palette.primary.main,
+                    fontStyle: AppTheme.typography.fontFamily,
+                    textShadow: `1px 1px 2px ${AppTheme.palette.primary.main}`,
+                    margin: "0 0 0 20px",
+                    fontSize: '1.5rem'
+                }}
+                >
+                  HighSchool
               </Typography>,
         content: <CLSSContentComponent />
     }
@@ -75,7 +131,7 @@ const accordionData = [
 
 const AccordionTemplate = () => {
    const theme = AppTheme.palette;
-   const [expanded, setExpanded] = React.useState<string | false>(false);
+   const [expanded, setExpanded] = React.useState<string | false>('panel0');
 
    const handleExpansion = (panel: string) => (
          _: React.SyntheticEvent, 
@@ -104,8 +160,8 @@ const AccordionTemplate = () => {
                             slotProps={{ transition: { timeout: 400 } }}
                             sx={{
                                 border: `3px solid ${theme.primary.main}`,
-                                '& .MuiAccordion-region': { height: expanded ? 'auto' : 0 },
-                                '& .MuiAccordionDetails-root': { display: expanded ? 'block' : 'none' }, 
+                                // '& .MuiAccordion-region': { height: expanded ? 'auto' : 0 },
+                                // '& .MuiAccordionDetails-root': { display: expanded ? 'block' : 'none' }, 
                             }}
                           >
                             <AccordionSummary
@@ -129,6 +185,15 @@ const AccordionTemplate = () => {
                                 }}
                               >
                                 <Typography variant='h4'>{item.title}</Typography>
+                                {item.subtitle && (
+                                  <Typography sx={{ 
+                                    color: theme.primary.main,
+                                    fontStyle: AppTheme.typography.fontFamily,
+                                    textShadow: `1px 1px 2px ${theme.primary.main}`,
+                                  }}>
+                                    {item.subtitle}
+                                  </Typography>
+                                )}
                             </AccordionSummary>
                             <AccordionDetails id={`panel${indx}-content`}>
                                 <Typography 

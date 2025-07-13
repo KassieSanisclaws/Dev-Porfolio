@@ -1,9 +1,11 @@
 import { Grid, Typography, Box, useMediaQuery } from "@mui/material";
 import HamburgerMenu from './hamburgerMenu/HamburgerMenu';
-import PageTabs from './PageTabs';
+import PageTabs from '../components/pageTabs/PageTabs';
+import AppTheme from "../theme/AppTheme";
 
 const Header = () => {
   const isMobile = useMediaQuery('(max-width: 1186px)');
+    const theme = AppTheme.palette;
     return (
         <Box sx={{ width: "100%" }}>
             <Grid container>
@@ -14,7 +16,16 @@ const Header = () => {
                       justifyContent: "flex-end",
                       paddingRight: "3%",
                       }}>
-                   <Typography variant='h3'>Kadeem Cherman</Typography> 
+                    <Typography 
+                      variant='h3'
+                        sx={{ 
+                            textTransform: 'uppercase',
+                            color: "white", 
+                            textShadow: `2px 2px 4px ${theme.primary.dark}`,
+                            fontWeight: "bold", 
+                        }}>
+                       Kadeem Cherman
+                    </Typography> 
                 </Grid>
                 <Grid item xs={2} md={2} lg={4.5}  sx={{ 
                        overflow: "hidden", 
