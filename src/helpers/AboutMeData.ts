@@ -9,7 +9,7 @@ export interface ResumeContent {
     content: string | string[]; // string = for text, string[] = for lists
 }
 
-export const resumeAssets: Record<'resume' | 'coverLetter' | 'certs' | 'grades', ResumeContent> = {
+export const resumeAssets: Record<'resume' | 'coverLetter' | 'certs' , ResumeContent> = {
    resume: {
     title: "Kadeem Cherman",
     subtitle: "Full Stack Developer",
@@ -201,9 +201,9 @@ export const resumeAssets: Record<'resume' | 'coverLetter' | 'certs' | 'grades',
     type: "image",
     content: [ image1, image2, image3 ]
   },
-  grades: {
-    title: "Transcripts & Grades",
-    type: "image",
-    content: [ "/assets/grades/grade1.jpg", "/assets/grades/grade2.jpg" ]
-  } 
+  // grades: {
+  //   title: "Transcripts & Grades",
+  //   type: "image",
+  //   content: [ "/assets/grades/grade1.jpg", "/assets/grades/grade2.jpg" ]
+  // } 
 };

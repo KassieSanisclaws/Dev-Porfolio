@@ -85,7 +85,7 @@ const Footer = () => {
 
               <IconButton
                 component={Link}
-                href="https://www.linkedin.com/in/kadeemcherman"
+                href="https://www.linkedin.com/in/kadeem-cherman-813b67219"
                 target="_blank"
                 rel="noopener"
                 aria-label="LinkedIn"

@@ -8,8 +8,8 @@ import { wireframeData, WireframeProjectContent } from "../helpers/WireframeData
 const WireFrame = () => {
  const theme = AppTheme.palette;
  const [selectedProject, setSelectedProject] = React.useState<WireframeProjectContent | null>(null);
-const [modalOpen, setModalOpen] = React.useState(false);
-const [selectedWireframe, setSelectedWireframe] = React.useState<string | null>(null);
+ const [modalOpen, setModalOpen] = React.useState(false);
+ const [selectedWireframe, setSelectedWireframe] = React.useState<string | null>(null);
 
 
 const handleOpenModal = (projectId: number) => {

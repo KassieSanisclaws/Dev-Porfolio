@@ -7,126 +7,54 @@ import AppTheme from "../../theme/AppTheme";
 import TFSContentComponent from "../../content/aboutme section/education section/TFSContentComponent";
 import CBCContentComponent from "../../content/aboutme section/education section/CBCContentComponent";
 import TriosContentComponent from "../../content/aboutme section/education section/TriosContentComponent";
-import CLSSContentComponent from "../../content/aboutme section/education section/CLSSContentComponent";
+// import CLSSContentComponent from "../../content/aboutme section/education section/CLSSContentComponent";
 import SheridanCollegeContentComponent from "../../content/aboutme section/education section/SheridanCollegeContentComponent";
 
 // Accordion data
 const accordionData = [
     {
-        title: <Typography variant='h4'
-                sx={{
-                    color: AppTheme.palette.primary.dark,
-                    fontStyle: AppTheme.typography.fontFamily,
-                    textShadow: `2px 2px 4px ${AppTheme.palette.primary.dark}`
-                }}
-                >
-                  Toronto Film School
-              </Typography>,
-        subtitle: <Typography variant='subtitle1'
-                sx={{
-                    color: AppTheme.palette.primary.main,
-                    fontStyle: AppTheme.typography.fontFamily,
-                    textShadow: `1px 1px 2px ${AppTheme.palette.primary.main}`,
-                    margin: "0 0 0 20px",
-                    fontSize: '1.5rem'
-                }}
-                >
-                  Game Design & Development
-              </Typography>,    
+        title: "Toronto Film School",
+        subtitle: "Game Design & Development",
         content: <TFSContentComponent />,
     },
     {
-        title: <Typography variant='h4'
-                sx={{
-                    color: AppTheme.palette.primary.dark,
-                    fontStyle: AppTheme.typography.fontFamily,
-                    textShadow: `2px 2px 4px ${AppTheme.palette.primary.dark}`
-                }}
-                >
-                  Canadian Business College
-              </Typography>,
-              subtitle: <Typography variant='subtitle1'
-                sx={{
-                    color: AppTheme.palette.primary.main,
-                    fontStyle: AppTheme.typography.fontFamily,
-                    textShadow: `1px 1px 2px ${AppTheme.palette.primary.main}`,
-                    margin: "0 0 0 20px",
-                    fontSize: '1.5rem'
-                }}
-                >
-                    Software Engineering & Web Development
-              </Typography>,
+        title: "Canadian Business College", 
+        subtitle: "Software Engineering & Web Development",
         content: <CBCContentComponent />
     },
     {
-        title: <Typography variant='h4'
-                sx={{
-                    color: AppTheme.palette.primary.dark,
-                    fontStyle: AppTheme.typography.fontFamily,
-                    textShadow: `2px 2px 4px ${AppTheme.palette.primary.dark}`
-                }}
-                >
-                  Trios College
-              </Typography>,
-              subtitle: <Typography variant='subtitle1'
-                sx={{
-                    color: AppTheme.palette.primary.main,
-                    fontStyle: AppTheme.typography.fontFamily,
-                    textShadow: `1px 1px 2px ${AppTheme.palette.primary.main}`,
-                    margin: "0 0 0 20px",
-                    fontSize: '1.5rem'
-                }}
-                >
-                  Enterprise Web & Mobile Applications Development + (Internship)
-              </Typography>,
+        title: "Trios College",
+        subtitle: "Enterprise Web & Mobile Applications Development + (Internship)",
         content: <TriosContentComponent />
     },
     {
-        title: <Typography variant='h4'
-                sx={{
-                    color: AppTheme.palette.primary.dark,
-                    fontStyle: AppTheme.typography.fontFamily,
-                    textShadow: `2px 2px 4px ${AppTheme.palette.primary.dark}`
-                }}
-                >
-                  Sheridan College
-              </Typography>,
-              subtitle: <Typography variant='subtitle1'
-                sx={{
-                    color: AppTheme.palette.primary.main,
-                    fontStyle: AppTheme.typography.fontFamily,
-                    textShadow: `1px 1px 2px ${AppTheme.palette.primary.main}`,
-                    margin: "0 0 0 20px",
-                    fontSize: '1.5rem'
-                }}
-                >
-                  Police Foundations & Community Safety
-              </Typography>,
+        title: "Sheridan College",
+        subtitle: "Police Foundations & Community Safety",
         content: <SheridanCollegeContentComponent />
     },
-    {
-        title: <Typography variant='h4'
-                sx={{
-                    color: AppTheme.palette.primary.dark,
-                    fontStyle: AppTheme.typography.fontFamily,
-                    textShadow: `2px 2px 4px ${AppTheme.palette.primary.dark}`
-                }}
-                >
-                  Cardinal Leger Secondary School
-              </Typography>,
-              subtitle: <Typography variant='subtitle1'
-                sx={{
-                    color: AppTheme.palette.primary.main,
-                    fontStyle: AppTheme.typography.fontFamily,
-                    textShadow: `1px 1px 2px ${AppTheme.palette.primary.main}`,
-                    margin: "0 0 0 20px",
-                    fontSize: '1.5rem'
-                }}
-                >
-                  HighSchool
-              </Typography>,
-        content: <CLSSContentComponent />
-    }
+    // {
+    //     title: <Typography variant='h4'
+    //             sx={{
+    //                 color: AppTheme.palette.primary.dark,
+    //                 fontStyle: AppTheme.typography.fontFamily,
+    //                 textShadow: `2px 2px 4px ${AppTheme.palette.primary.dark}`
+    //             }}
+    //             >
+    //               Cardinal Leger Secondary School
+    //           </Typography>,
+    //           subtitle: <Typography variant='subtitle1'
+    //             sx={{
+    //                 color: AppTheme.palette.primary.main,
+    //                 fontStyle: AppTheme.typography.fontFamily,
+    //                 textShadow: `1px 1px 2px ${AppTheme.palette.primary.main}`,
+    //                 margin: "0 0 0 20px",
+    //                 fontSize: '1.5rem'
+    //             }}
+    //             >
+    //               HighSchool
+    //           </Typography>,
+    //     content: <CLSSContentComponent />
+    // }
 ];
 
 const AccordionTemplate = () => {
@@ -165,14 +93,14 @@ const AccordionTemplate = () => {
                             }}
                           >
                             <AccordionSummary
-                              expandIcon={<ExpandCircleDownTwoToneIcon 
+                              expandIcon={<ExpandCircleDownTwoToneIcon
                                sx={{ 
                                  fontSize: 40,
                                  color: theme.primary.main,
                                  "& .MuiSvgIcon-root": {
                                     fill: theme.primary.dark,
                                    },
-                                   margin: "15px"
+                                   margin: "15px",
                                 }}
                               />}
                               aria-controls={`panel${indx}-content`}
@@ -184,22 +112,32 @@ const AccordionTemplate = () => {
                                     },
                                 }}
                               >
-                                <Typography variant='h4'>{item.title}</Typography>
+                                <Typography 
+                                   variant='h4'
+                                   sx={{
+                                     color: theme.primary.dark,
+                                     fontFamily: AppTheme.typography.fontFamily,
+                                     textShadow: `2px 2px 4px ${theme.primary.dark}`,
+                                     
+                                     }}
+                                   >
+                                    {item.title}
+                                </Typography>
                                 {item.subtitle && (
                                   <Typography sx={{ 
                                     color: theme.primary.main,
                                     fontStyle: AppTheme.typography.fontFamily,
                                     textShadow: `1px 1px 2px ${theme.primary.main}`,
+                                    margin: "0 0 0 20px",
                                   }}>
                                     {item.subtitle}
                                   </Typography>
                                 )}
                             </AccordionSummary>
                             <AccordionDetails id={`panel${indx}-content`}>
-                                <Typography 
-                                      variant='body1'>
-                                        {item.content}
-                                </Typography>
+                                <Box> 
+                                    {item.content}
+                                </Box>
                             </AccordionDetails>
                         </Accordion>
                        ))}

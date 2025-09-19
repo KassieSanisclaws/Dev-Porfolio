@@ -8,7 +8,8 @@ import MySkills from './sections/MySkills';
 import DevProjects from './sections/DevProjects';
 import ContactMe from './sections/ContactMe';
 import Footer from './components/Footer';
-import WireFrame from './sections/WireFrame';
+// import WireFrame from './sections/WireFrame';
+import GameDevGDD from './sections/GameDevGDD';
 
 function App() {
   const theme = AppTheme.palette;
@@ -53,7 +54,8 @@ function App() {
         sx={{ bgcolor: theme.primary.main, 
               overflow: "hidden",
             }}>
-      <WireFrame />
+      {/* <WireFrame /> */}
+      <GameDevGDD />
       </Box>
       <Box className="grid-item contactMe"
            id="contactMe" 

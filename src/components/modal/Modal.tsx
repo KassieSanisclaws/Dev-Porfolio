@@ -1,5 +1,6 @@
 import { Box, Button, Typography } from '@mui/material';
 import React from 'react';
+import AppTheme from '../../theme/AppTheme';
 
 interface ModalProps {
     id: string;
@@ -37,7 +38,8 @@ interface ModalProps {
     footer?: React.ReactNode;
     background?: string;
 }
-
+// Theme for colors
+const theme = AppTheme;
 
 const Modal = ({ 
      id, 
@@ -133,7 +135,15 @@ const Modal = ({
         ) : (title || subtitle) ? (
           <Box sx={{ mb: 2, textAlign: 'center' }}>
            {title && (
-          <Typography variant="h2" gutterBottom>
+          <Typography 
+               variant="h2" 
+               gutterBottom
+               sx={{
+                color: "white",
+                textShadow: `1px 1px 2px ${theme.palette.primary.dark}`,
+                textTransform: 'uppercase',
+               }}
+               >
             {title}
           </Typography>
           )}
@@ -169,6 +179,8 @@ const Modal = ({
                minWidth: '40px',      // Ensures button is large enough
                height: '40px',        // Sets consistent button height
                padding: 0,            // Removes inner padding
+               color: 'white',        // White color for the "×"
+               textShadow: `1px 1px 2px ${theme.palette.primary.dark}`,
               }}>
             &times;
           </Button>

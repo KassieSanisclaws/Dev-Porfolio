@@ -1,3 +1,4 @@
+import React from 'react';
 import { Grid, Typography, Box, Button, TextField } from "@mui/material";
 import AppTheme from '../theme/AppTheme';
 import EmailIcon from '@mui/icons-material/Email';
@@ -7,10 +8,53 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-
+import emailjs from '@emailjs/browser';
 
 const ContactMe = () => {
  const theme = AppTheme.palette;
+ const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+ const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+ const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+ 
+ //Form State
+ const [formData, setFormData] = React.useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
+ });
+
+ const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+        ...formData,
+        [e.target.name]: e.target.value
+    });
+ };
+
+ // Form Submit
+ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    // send using EmailJS       
+    emailjs.send(
+      SERVICE_ID,
+      TEMPLATE_ID,
+      {
+        name: formData.name,
+        email: formData.email,
+        number: formData.phone,
+        message: formData.message,
+      },
+      PUBLIC_KEY
+    ).then((result) => {
+      console.log('Email sent:', result.text);
+      alert('Message sent successfully!');
+      setFormData({ name: '', email: '', phone: '', message: '' });
+    }).catch((error) => {
+      console.error('Email error:', error);
+      alert('Failed to send message. Check console for details.');
+    });
+ };
     return (
         <Box sx={{
             padding: 2,
@@ -95,16 +139,16 @@ const ContactMe = () => {
                     {/* Social Media Icons */}
                     <Box component="ul" sx={{ display: 'flex', justifyContent: 'center', marginTop: 3, padding: 0, listStyle: 'none' }}>
                         <Box component="li" sx={{ marginRight: 2 }}>
-                            <a href="#"><TwitterIcon sx={{ fontSize: 40, color: theme.primary.dark, opacity: 0.5, '&:hover': { opacity: 1 } }} /></a>
+                            <a href="https://x.com/home"><TwitterIcon sx={{ fontSize: 40, color: theme.primary.dark, opacity: 0.5, '&:hover': { opacity: 1 } }} /></a>
                         </Box>
                         <Box component="li" sx={{ marginRight: 2 }}>
-                            <a href="#"><GitHubIcon sx={{ fontSize: 40, color: theme.primary.dark, opacity: 0.5, '&:hover': { opacity: 1 } }} /></a>
+                            <a href="https://github.com/KassieSanisclaws"><GitHubIcon sx={{ fontSize: 40, color: theme.primary.dark, opacity: 0.5, '&:hover': { opacity: 1 } }} /></a>
                         </Box>
                         <Box component="li" sx={{ marginRight: 2 }}>
-                            <a href="#"><InstagramIcon sx={{ fontSize: 40, color: theme.primary.dark, opacity: 0.5, '&:hover': { opacity: 1 } }} /></a>
+                            <a href="https://www.instagram.com/"><InstagramIcon sx={{ fontSize: 40, color: theme.primary.dark, opacity: 0.5, '&:hover': { opacity: 1 } }} /></a>
                         </Box>
                         <Box component="li">
-                            <a href="#"><LinkedInIcon sx={{ fontSize: 40, color: theme.primary.dark, opacity: 0.5, '&:hover': { opacity: 1 } }} /></a>
+                            <a href="https://www.linkedin.com/in/kadeem-cherman-813b67219"><LinkedInIcon sx={{ fontSize: 40, color: theme.primary.dark, opacity: 0.5, '&:hover': { opacity: 1 } }} /></a>
                         </Box>
                     </Box>
                 </Grid>
@@ -127,14 +171,40 @@ const ContactMe = () => {
                     }}>
                         Send Me A Message:
                     </Typography>
-                    <Box component="form" sx={{ 
+                    <Box component="form" 
+                         onSubmit={handleFormSubmit}
+                         sx={{ 
                             display: 'flex', 
                             flexDirection: 'column', 
                             gap: 2,
                             }}>
-                        <TextField fullWidth label="Name" required variant="standard" />
-                        <TextField fullWidth label="Email Address" required variant="standard" />
-                        <TextField fullWidth label="Mobile Phone" required variant="standard" />
+                        <TextField 
+                           fullWidth 
+                           label="Name" 
+                           required 
+                           variant="standard"
+                           name="name"
+                           value={formData.name}
+                           onChange={handleFormChange}
+                           />
+                        <TextField 
+                           fullWidth 
+                           label="Email Address" 
+                           required 
+                           variant="standard"
+                           name="email"
+                           value={formData.email}
+                           onChange={handleFormChange} 
+                           />
+                        <TextField 
+                           fullWidth 
+                           label="Mobile Phone" 
+                           required 
+                           variant="standard" 
+                           name="phone"
+                           value={formData.phone}
+                           onChange={handleFormChange}
+                           />
                         <TextField
                             fullWidth
                             label="Your Message Here"
@@ -142,6 +212,9 @@ const ContactMe = () => {
                             variant="standard"
                             multiline
                             minRows={4}
+                            name="message"
+                            value={formData.message}
+                            onChange={handleFormChange}
                         />
                         <Box sx={{ 
                              display: 'flex', 

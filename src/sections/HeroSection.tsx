@@ -6,7 +6,7 @@ const HeroSection = () => {
 const isMobile = useMediaQuery(AppTheme.breakpoints.down('sm')); // Adjust breakpoint 
 const handleDownloadDocs = (fileName: string) => {
         const link = document.createElement('a');
-        link.href = `../../src/assets/documents/${fileName}`;
+        link.href = `/documents/${fileName}`;
         link.download = fileName;
         document.body.appendChild(link);
         link.click();
@@ -19,11 +19,11 @@ const handleDownloadDocs = (fileName: string) => {
                   alignItems={"center"}
                   justifyContent={"center"}
                   marginTop={1}
-                  sx={{ overflow: "hidden", padding: "10px", border: "3px solid black", width: "100%" }}>          
+                  sx={{ overflow: "hidden", padding: "10px", width: "100%" }}>          
              <Grid item xs={12} sm={12} md={12} xl={6}>
                  <Box 
                      sx={{
-                        border: "3px solid purple",
+                        // border: "3px solid purple",
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
@@ -33,7 +33,7 @@ const handleDownloadDocs = (fileName: string) => {
                         marginLeft: "25%",
                         overflow: "hidden" }}>
                     <img
-                          src={"../../src/assets/images/Pictures/IMG_0089.PNG"}
+                          src={"../../src/assets/images/Pictures/Profile image.png"}
                           alt={"Kadeem Cherman"}
                           style={{ width: "100%", height: "100%", maxHeight: "500px", objectFit: "cover", borderRadius: "4px" }}
                       />
@@ -103,7 +103,7 @@ const handleDownloadDocs = (fileName: string) => {
                                     width: "100%"
                                  }}
                                  startIcon={<DownloadIcon sx={{ filter: `drop-shadow(2px 2px 4px ${AppTheme.palette.primary.dark})` }}/>}
-                                 onClick={() => handleDownloadDocs("Kadeem_Cherman_Resume.pdf")}
+                                 onClick={() => handleDownloadDocs("Resume.docx")}
                                  >
                               <Typography variant="h5" sx={{ color: "white", textShadow: `2px 2px 4px ${AppTheme.palette.primary.dark}` }}>Download Resume</Typography>
                           </Button>
@@ -117,7 +117,7 @@ const handleDownloadDocs = (fileName: string) => {
                                     width: "100%"
                                  }}
                                  startIcon={<DownloadIcon sx={{ filter: `drop-shadow(2px 2px 4px ${AppTheme.palette.primary.dark})` }}/>}
-                                 onClick={() => handleDownloadDocs("Kadeem_Cherman_CoverLetter.pdf")}
+                                 onClick={() => handleDownloadDocs("Cover letter.docx")}
                                  >
                               <Typography variant="h5" sx={{ color: "white", textShadow: `2px 2px 4px ${AppTheme.palette.primary.dark}` }}>Download CoverLetter</Typography>
                           </Button>
