@@ -6,6 +6,12 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+// Create Express app
+const app = express();
+
+// Define port
+const PORT = process.env.PORT || 5000;
+
 // serve the static files from the dist folder
 app.use(express.static(path.join(__dirname, 'dist')));
 app.get('*', (req, res) => {
