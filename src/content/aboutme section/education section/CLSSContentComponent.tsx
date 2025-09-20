@@ -1,4 +1,4 @@
-import { Box, Grid, Typography, AccordionDetails, TableHead, TableContainer, Table, TableBody, TableRow, 
+import { Box, Grid, AccordionDetails, TableHead, TableContainer, Table, TableBody, TableRow, 
          TableCell, Avatar } from "@mui/material";
 
 const CLSSContentComponent = () => {

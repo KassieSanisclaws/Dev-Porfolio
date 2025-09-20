@@ -1,5 +1,4 @@
-import React from 'react';
-import { Grid, Typography, Box } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 
 
 const Carousel = () => {
